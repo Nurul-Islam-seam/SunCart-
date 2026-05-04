@@ -1,26 +1,27 @@
 @import "tailwindcss";
+@import "animate.css";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #fff8f0;
+  --foreground: #1f2937;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-body);
+  --font-display: var(--font-display);
 }
 
 body {
-  background: var(--background);
+  background: radial-gradient(1200px 600px at 85% -10%, #ffe8a3 0%, rgba(255, 232, 163, 0) 60%),
+    radial-gradient(900px 480px at 0% 0%, #b6f2ec 0%, rgba(182, 242, 236, 0) 55%),
+    linear-gradient(180deg, #fff8f0 0%, #fffdf9 45%, #ffffff 100%);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  min-height: 100%;
+}
+
+.font-display {
+  font-family: var(--font-display);
 }
